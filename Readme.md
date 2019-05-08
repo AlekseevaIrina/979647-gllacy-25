@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Irina Alekseeva](https://up.htmlacademy.ru/htmlcss/25/user/979647).
-* Наставник: `Неизвестно`.
+* Наставник: [Алексей Пудников](https://up.htmlacademy.ru/htmlcss/25/user/71418).
 
 ---
 
