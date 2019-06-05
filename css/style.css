@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #849d8f;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-navigation {
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #849d8f;
+}
+
+.site-navigation,
+.user-navigation,
+.catalog-item,
+.footer-navigation,
+.footer-social {
+  list-style: none;
+}
+
+.search,
+.login-link,
+.cart {
+  background-color: #a1b4a9;
+}
+
+.site-navigation a,
+.user-navigation a,
+.footer-navigation a,
+.footer-copyright a {
+  color: #ffffff;
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus,
+.site-navigation a:hover,
+.site-navigation a:focus,
+.footer-navigation a:hover,
+.footer-navigation a:focus,
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+  background-color: #ffffff;
+  color: black;
+}
+
+.header-contacts {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.header-contacts span {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.features-list,
+.product-list {
+  list-style: none;
+}
+
+.feature-item {
+  text-align: left;
+}
+
+.container {
+  font-size: 16px;
+  line-height: 22px;
+  color: black;
+  font-weight: 400;
+}
+
+.features {
+  background-color: #f8f5f2;
+  background-image: url("../img/wafer-pattern.jpg");
+  background-repeat: repeat;
+}
+
+.features p:first-child {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.new-articles {
+  background-color: #f8f5f2;
+  background-image: url("../img/strawberry-background.png");
+  background-repeat: no-repeat;
+}
+
+.new-articles h2 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.new-articles a {
+  font-size: 24px;
+  line-height: 30px;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.appointment {
+  background-color: #f8f5f2;
+  background-image: url("../img/bg-post.svg");
+  background-repeat: no-repeat;
+}
+
+.footer-navigation {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.accent-footer-link {
+  font-weight: bold;
+}
+
+.search-form,
+.login-form,
+.modal,
+.visually-hidden,
+.inner-page .cart,
+.page-title {
+  display: none;
+}
+
+.catalog-item {
+  display: none;
+  weight: 145px;
+  height: 175px;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: #ffffff;
+}
+
+.catalog-item a {
+  color: black;
+  font-weight: 400;
+}
+
+.catalog-item a:hover,
+.catalog-item a:focus {
+  background-color: #ffbc9e;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  color: white;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  text-decoration: underline;
+}
+
+.breadcrumbs-current {
+  color: #aba9a7;
+}
+
+.product a {
+  color: white;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.product-price {
+  color: white;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+}
+
+.weight {
+  font-size: 30px;
+}
+
+.social-button {
+  color: #ffffff;
+}
