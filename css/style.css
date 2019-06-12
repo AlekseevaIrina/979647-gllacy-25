@@ -157,6 +157,47 @@ p {
   flex-basis: 50%;
 }
 
+.feature-item-ice-cream,
+.feature-item-eco {
+  padding-right: 25px;
+}
+
+.feature-item-ice-cream:before {
+  display: block;
+  content: '';
+
+  background-image: url("../img/ice-cream.svg");
+  height: 49px;
+  width: 49px;
+}
+
+.feature-item-eco:before {
+  display: block;
+  content: '';
+
+  background-image: url("../img/eco.svg");
+  height: 49px;
+  width: 49px;
+}
+
+.feature-item-cow:before {
+  display: block;
+  content: '';
+
+  background-image: url("../img/cow.svg");
+  height: 49px;
+  width: 49px;
+}
+
+.feature-item-thermometer:before {
+  display: block;
+  content: '';
+
+  background-image: url("../img/thermometer.svg");
+  height: 49px;
+  width: 49px;
+}
+
 .new-articles {
   background-color: #f8f5f2;
   background-image: url("../img/strawberry-background.png");
@@ -309,9 +350,10 @@ p {
 }
 
 .product {
-  width: 267px;
-  margin-right: 26px;
+  /*width: 267px;*/
+  flex-basis: 25%;
   margin-top: 39px;
+  text-align: center;
 }
 
 .product a {
@@ -323,10 +365,6 @@ p {
 
 .product h3 {
   margin: 0;
-}
-
-.product:nth-child(4n) {
-  margin-right: 0;
 }
 
 .product-image img {
