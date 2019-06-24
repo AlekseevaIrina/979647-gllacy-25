@@ -12,10 +12,13 @@
 <div class="container">
 
   <header class="header">
+
     <nav class="header-navigation">
+
       <a class="header-logo" href="index.html">
         <img src="img/logo.png" alt="Логотип «Глэси»"/>
       </a>
+
       <ul class="site-navigation">
         <li class="site-navigation-current site-navigation-item">
           <a href="catalog.html">Каталог</a>
@@ -30,6 +33,7 @@
         <li class="site-navigation-item"><a href="delivery.html">Доставка и оплата</a></li>
         <li class="site-navigation-item"><a href="about.html">О Компании</a></li>
       </ul>
+
       <ul class="user-navigation">
         <li class="navigation-search">
           <button class="search" type="button"><span class="visually-hidden">Поиск</span>
@@ -49,18 +53,19 @@
         </li>
         <li class="navigation-login">
           <a class="login-link" href="login.html">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19"
-               viewBox="0 0 21 19">
-            <g>
-              <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
-              <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
-            </g>
-          </svg>
-          Вход</a>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19"
+                 viewBox="0 0 21 19">
+              <g>
+                <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
+                <path
+                  d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
+              </g>
+            </svg>
+            Вход</a>
           <form action="https://echo.htmlacademy.ru" class="login-form modal" method="post">
             <p>
               <label class="visually-hidden" for="user-email">Электронная почта</label>
-              <input class="login-email" id="email" name="email" placeholder="Электронная почта" type="text">
+              <input class="login-email" id="user-email" name="email" placeholder="Электронная почта" type="text">
             </p>
             <p>
               <label class="visually-hidden" for="password">Пароль</label>
@@ -122,13 +127,17 @@
           </div>
         </li>
       </ul>
+
     </nav>
+
     <section class="header-contacts">
       <p>С 10 до 20, ежедневно<br/><span>8 812 450-25-25</span></p>
     </section>
+
   </header>
 
   <main class="main">
+
     <ul class="breadcrumbs">
       <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
       <li class="breadcrumbs-item"><a href="catalog.html">Каталог</a></li>
@@ -136,6 +145,93 @@
     </ul>
 
     <h1 class="page-title">Сливочное мороженое</h1>
+
+    <section class="filters">
+      <h2 class="visually-hidden">Фильтр товаров</h2>
+
+      <div class="filter-items">
+        <div class="filter-item">
+          <p>Сортировка:</p>
+          <button class="button-sorting" type="submit">
+            по популярности
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+              <path fill="#fff" d="M5.5 10L0 0h11"/>
+            </svg>
+          </button>
+        </div>
+        <div class="filter-item">
+          <p>Цена: 100 руб. - 500 руб.</p>
+          <div class="cost">
+            <div class="cost-line">
+              <button class="button-cost button-cost-start" type="submit">
+              </button>
+              <button class="button-cost button-cost-end" type="submit">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="filter-item">
+          <p>Жирность:</p>
+          <ul class="filter-fat-content">
+            <li class="filter-fat-content-item">
+              <input class="visually-hidden filter-input-radio" type="radio" name="filter-fat"
+                     value="fat-content-0" id="filter-fat-content-0">
+              <label for="filter-fat-content-0">0%</label>
+            </li>
+            <li class="filter-fat-content-item">
+              <input class="visually-hidden filter-input-radio" type="radio" name="filter-fat"
+                     value="fat-content-10" id="filter-fat-content-10" checked>
+              <label for="filter-fat-content-10">до 10%</label>
+            </li>
+            <li class="filter-fat-content-item">
+              <input class="visually-hidden filter-input-radio" type="radio" name="filter-fat"
+                     value="fat-content-30" id="filter-fat-content-30">
+              <label for="filter-fat-content-30">до 30%</label>
+            </li>
+            <li class="filter-fat-content-item">
+              <input class="visually-hidden filter-input-radio" type="radio" name="filter-fat"
+                     value="fat-content-more-30" id="filter-fat-content-more-30">
+              <label for="filter-fat-content-more-30">выше 30%</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="filter-items">
+        <div class="filter-item">
+          <p>Наполнители:</p>
+          <ul class="filter-fillers">
+            <li class="filter-filler-item">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="chocolate"
+                     id="filter-chocolate"
+                     checked>
+              <label for="filter-chocolate">шоколадные</label>
+            </li>
+            <li class="filter-filler-item">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="sugar-powders"
+                     id="filter-sugar-powders" checked>
+              <label for="filter-sugar-powders">сахарные присыпки</label>
+            </li>
+            <li class="filter-filler-item">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="fruits" id="filter-fruits">
+              <label for="filter-fruits">фрукты</label>
+            </li>
+            <li class="filter-filler-item">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="syrups" id="filter-syrups">
+              <label for="filter-syrups">сиропы</label>
+            </li>
+            <li class="filter-filler-item">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="jams" id="filter-jams">
+              <label for="filter-jams">джемы</label>
+            </li>
+          </ul>
+        </div>
+        <button class="button-apply filter-item" type="submit">
+          Применить
+        </button>
+      </div>
+
+    </section>
 
     <section class="catalog">
       <h2 class="visually-hidden">Список сливочного мороженого</h2>
@@ -197,7 +293,8 @@
         <li class="product">
           <div class="product-image">
             <a href="product.html">
-              <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"/>
+              <img src="img/product-4.jpg" width="267" height="267"
+                   alt="Сливочное крем-брюле с карамельной подливкой"/>
             </a>
             <p class="product-price">
               <b>415 ₽<span class="weight">/кг</span></b>
@@ -350,6 +447,19 @@
 
       </ul>
     </section>
+
+    <div class="paginator">
+      <ul class="pagination-list">
+        <li class="pagination-item prev disabled"><a href="#prev"><span class="visually-hidden">Назад</span></a></li>
+        <li class="pagination-item pagination-item-current"><a>1</a></li>
+        <li class="pagination-item"><a href="#">2</a></li>
+        <li class="pagination-item"><a href="#">3</a></li>
+        <li class="pagination-item"><a href="#">4</a></li>
+        <li class="pagination-item"><a href="#">5</a></li>
+        <li class="pagination-item next"><a href="#next"><span class="visually-hidden">Вперёд</span></a></li>
+      </ul>
+    </div>
+
   </main>
 
   <footer class="footer">
@@ -408,6 +518,7 @@
   </footer>
 
 </div>
+
 
 </body>
 
