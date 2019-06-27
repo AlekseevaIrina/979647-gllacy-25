@@ -71,7 +71,13 @@ input[type="radio"].visually-hidden {
   z-index: 3;
   height: 100%;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease-out;
+}
+
+.overlay.modal-show {
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
 }
 
 @keyframes shake {
@@ -167,7 +173,8 @@ input[type="radio"].visually-hidden {
   padding: 7px 15px;
 }
 
-.site-navigation-item:hover .catalog-item {
+.site-navigation-item:hover .catalog-item,
+.site-navigation-item:focus-within .catalog-item {
   display: block;
 }
 
@@ -893,15 +900,22 @@ input[type="radio"].visually-hidden {
 
   background-color: #f8f5f2;
   background-image: url("../img/map.png");
-  background-repeat: no-repeat;
 
   width: 1200px;
   min-height: 430px;
   box-sizing: border-box;
 }
 
+.yandex-map {
+  position: relative;
+  z-index: 2;
+  height: 430px;
+}
+
 .contacts {
   position: absolute;
+
+  z-index: 3;
 
   top: 63px;
   right: 27px;
@@ -918,10 +932,11 @@ input[type="radio"].visually-hidden {
   content: '';
 
   position: absolute;
+  z-index: 1;
   top: 137px;
   left: 266px;
 
-  background: url("../img/pin-shadow.svg") no-repeat;
+  background: url("../img/pin-shadow.png") no-repeat;
   height: 142px;
   width: 219px;
 }
@@ -1063,11 +1078,13 @@ input[type="radio"].visually-hidden {
   border-radius: 15px;
 }
 
-.navigation-search:hover .search-form {
+.navigation-search:hover .search-form,
+.navigation-search:focus-within .search-form {
   display: block;
 }
 
-.navigation-login:hover .login-form {
+.navigation-login:hover .login-form,
+.navigation-login:focus-within .login-form {
   display: block;
 }
 
@@ -1516,12 +1533,11 @@ input[type="radio"].visually-hidden {
 }
 
 .product {
-  flex-basis: 25%;
+  flex-basis: calc(25% - 20px);
   margin: 0 0 20px;
   padding: 10px;
   text-align: center;
   position: relative;
-  box-sizing: border-box;
 }
 
 .product-view {
@@ -1665,6 +1681,12 @@ input[type="radio"].visually-hidden {
   width: 400px;
   margin-left: -230px;
   padding: 20px 25px;
+  transform: scale(0, 0);
+  transition: transform 0.3s ease-out;
+}
+
+.modal-feedback.modal-show {
+  transform: scale(1, 1);
 }
 
 .feedback-form {

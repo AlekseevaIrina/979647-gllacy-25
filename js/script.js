@@ -1,4 +1,3 @@
-
 var link = document.querySelector(".button-contacts");
 
 var overlay = document.querySelector(".overlay");
@@ -20,54 +19,70 @@ try {
   isStorageSupport = false;
 }
 
+function closeModal(evt) {
+  evt.preventDefault();
+  popup.classList.remove("modal-show");
+  overlay.classList.remove("modal-show");
+  popup.classList.remove("modal-error");
+
+  close.removeEventListener("click", closeModal);
+  overlay.removeEventListener("click", closeModal);
+}
+
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("modal-show");
   overlay.classList.add("modal-show");
+
   if (storage) {
     feedbackName.value = storage;
     feedbackEmail.focus();
   } else {
     feedbackName.focus();
   }
+
+  close.addEventListener("click", closeModal);
+  overlay.addEventListener("click", closeModal);
 });
 
-close.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.remove("modal-show");
-  overlay.classList.remove("modal-show");
-  popup.classList.remove("modal-error");
-});
-
-overlay.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.remove("modal-show");
-  overlay.classList.remove("modal-show");
-  popup.classList.remove("modal-error");
-});
 
 form.addEventListener("submit", function (evt) {
   evt.preventDefault();
+
   if (!feedbackName.value || !feedbackEmail.value || !feedbackMessage.value) {
-    evt.preventDefault();
     popup.classList.remove("modal-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("modal-error");
-  }
-  else {
+  } else {
     localStorage.setItem("feedbackName", feedbackName.value);
     localStorage.setItem("feedbackEmail", feedbackEmail.value);
   }
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keyup", function (evt) {
 
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (popup.classList.contains("modal-show")) {
-      popup.classList.remove("modal-show");
-      popup.classList.remove("modal-error");
-      overlay.classList.remove("modal-show");
-    }
+  if (evt.keyCode === 27 && popup.classList.contains("modal-show")) {
+    closeModal(evt);
   }
 });
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  ymaps.ready(init);
+
+  function init() {
+    var map = new ymaps.Map("yandex-map", {
+      center: [59.939028, 30.329499],
+      zoom: 16,
+      controls: []
+    });
+    var placemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+      iconLayout: "default#image",
+      iconImageHref: "img/pin-shadow.png",
+      iconImageSize: [218, 142],
+      iconImageOffset: [-35, -142]
+    });
+
+    map.geoObjects.add(placemark);
+  }
+});
+
