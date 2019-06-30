@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8"/>
   <title>Глейси</title>
-  <link href="css/style.css" rel="stylesheet"/>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <header class="header">
       <nav class="header-navigation">
         <a class="header-logo" href="index.html">
-          <img alt="Логотип «Глэси»" src="img/logo.png"/>
+          <img alt="Логотип «Глэси»" src="img/logo.png" width="154" height="64"/>
         </a>
         <ul class="site-navigation">
           <li class="site-navigation-item">
@@ -40,12 +40,15 @@
         </ul>
         <ul class="user-navigation">
           <li class="navigation-search">
-            <button class="search" type="button"><span class="visually-hidden">Поиск</span>
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
-                   viewBox="0 0 17 17">
-                <path fill="#fff"
-                      d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
-              </svg>
+            <div class="search-wrapper">
+              <button class="search" type="button"><span class="visually-hidden">Поиск</span>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17"
+                     height="17"
+                     viewBox="0 0 17 17">
+                  <path fill="#fff"
+                        d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
+                </svg>
+              </button>
               <form action="https://echo.htmlacademy.ru" class="search-form modal" method="post">
                 <p>
                   <label>
@@ -53,38 +56,41 @@
                   </label>
                 </p>
               </form>
-            </button>
+            </div>
           </li>
           <li class="navigation-login">
-            <a class="login-link" href="login.html">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19"
-                   viewBox="0 0 21 19">
-                <g>
-                  <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
-                  <path
-                    d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
-                </g>
-              </svg>
-              Вход</a>
-            <form action="https://echo.htmlacademy.ru" class="login-form modal" method="post">
-              <p>
-                <label class="visually-hidden" for="user-email">Электронная почта</label>
-                <input class="login-email" id="user-email" name="email" placeholder="Электронная почта" type="text">
-              </p>
-              <p>
-                <label class="visually-hidden" for="password">Пароль</label>
-                <input class="login-password" id="password" name="password" placeholder="Пароль" type="password">
-              </p>
-              <div class="login-help">
-                <button class="button button-entrance" type="submit">
-                  Войти
-                </button>
-                <div class="login-help-restore">
-                  <a class="restore" href="#">Забыли пароль?</a>
-                  <a class="restore" href="#">Новая регистрация</a>
+            <div class="login-wrapper">
+              <a class="login-link" href="login.html">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21"
+                     height="19"
+                     viewBox="0 0 21 19">
+                  <g>
+                    <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
+                    <path
+                      d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
+                  </g>
+                </svg>
+                Вход</a>
+              <form action="https://echo.htmlacademy.ru" class="login-form modal" method="post">
+                <p>
+                  <label class="visually-hidden" for="user-email">Электронная почта</label>
+                  <input class="login-email" id="user-email" name="email" placeholder="Электронная почта" type="text">
+                </p>
+                <p>
+                  <label class="visually-hidden" for="password">Пароль</label>
+                  <input class="login-password" id="password" name="password" placeholder="Пароль" type="password">
+                </p>
+                <div class="login-help">
+                  <button class="button button-entrance" type="submit">
+                    Войти
+                  </button>
+                  <div class="login-help-restore">
+                    <a class="restore" href="#">Забыли пароль?</a>
+                    <a class="restore" href="#">Новая регистрация</a>
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </li>
           <li class="navigation-cart">
             <a class="cart" href="cart.html">
@@ -304,20 +310,23 @@
     </div>
 
     <div class="map">
-      <section class="contacts">
-        <h2 class="visually-hidden">Контактная информация</h2>
-        <div class="contacts-wrapper">
-          <p class="contacts-address">Адрес главного офиса и офлайн-магазина:<br><span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
-          </p>
-          <p class="contacts-telephone">Для заказов по телефону:<br><span>8 812 450-25-25<br></span>(с 10 до 20
-            ежедневно)
-          </p>
-          <button class="button button-contacts" type="submit">
-            Форма обратной связи
-          </button>
-        </div>
-      </section>
-      <div id="yandex-map" class="yandex-map"></div>
+      <div class="container">
+
+        <section class="contacts">
+          <h2 class="visually-hidden">Контактная информация</h2>
+          <div class="contacts-wrapper">
+            <p class="contacts-address">Адрес главного офиса и офлайн-магазина:<br><span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+            </p>
+            <p class="contacts-telephone">Для заказов по телефону:<br><span>8 812 450-25-25<br></span>(с 10 до 20
+              ежедневно)
+            </p>
+            <a class="button button-contacts" href="form.html">
+              Форма обратной связи
+            </a>
+          </div>
+        </section>
+        <div id="yandex-map" class="yandex-map"></div>
+      </div>
     </div>
 
   </main>
@@ -369,10 +378,11 @@
       </ul>
       <p class="footer-copyright">
         <a href="https://htmlacademy.ru"><span class="visually-hidden">HTML Academy</span>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="108" height="39"
-               viewBox="0 0 108 39">
-            <image id="logo-htmlacademy-small" width="108" height="39"
-                   xlink:href="data:img/png;base64,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"/>
+          <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg"  width="108" height="39" viewBox="0 0 108.08 36.85"><title>
+            logo-htmlacademy-small1</title>
+            <path
+              d="M44.61,26.88a2,2,0,0,0,.55-0.1v1.33a3.25,3.25,0,0,1-1.18.21,1.67,1.67,0,0,1-1.67-1,4.84,4.84,0,0,1-3.14,1.08c-1.51,0-2.91-.83-2.91-2.55,0-2.13,2-2.79,3.71-2.79a11.08,11.08,0,0,1,2.17.25v-0.3c0-1-.76-1.77-2.19-1.77a7.42,7.42,0,0,0-3,.64v-1.7a10.21,10.21,0,0,1,3.19-.55c2.36,0,3.81,1.12,3.81,3.65v3a0.54,0.54,0,0,0,.49.59h0.17Zm-6.44-1.13A1.35,1.35,0,0,0,39.63,27h0.11a3.39,3.39,0,0,0,2.41-1V24.58a9.72,9.72,0,0,0-1.81-.21c-1,0-2.16.33-2.16,1.38h0Zm12.36-6.11a5,5,0,0,1,2.57.64V22a4.08,4.08,0,0,0-2.3-.7,2.75,2.75,0,1,0,0,5.49,5,5,0,0,0,2.43-.64v1.71a6.27,6.27,0,0,1-2.76.57A4.21,4.21,0,0,1,46,24.51q0-.21,0-0.41a4.32,4.32,0,0,1,4.18-4.46h0.38Zm12.17,7.24a2,2,0,0,0,.55-0.1v1.33a3.25,3.25,0,0,1-1.18.21,1.67,1.67,0,0,1-1.67-1,4.84,4.84,0,0,1-3.14,1.08c-1.51,0-2.91-.83-2.91-2.55,0-2.13,2-2.79,3.71-2.79a11.08,11.08,0,0,1,2.17.25v-0.3c0-1-.76-1.77-2.19-1.77a7.42,7.42,0,0,0-3,.64v-1.7a10.21,10.21,0,0,1,3.19-.55c2.36,0,3.81,1.12,3.81,3.65v3a0.54,0.54,0,0,0,.49.59h0.17Zm-6.44-1.13A1.35,1.35,0,0,0,57.73,27h0.11a3.39,3.39,0,0,0,2.41-1V24.58a9.72,9.72,0,0,0-1.81-.21c-1.06,0-2.16.33-2.16,1.38h0ZM73,16V28.2H71.35V26.88a3.88,3.88,0,0,1-3.19,1.54,4.4,4.4,0,0,1,0-8.78,3.81,3.81,0,0,1,3,1.3V16H73Zm-4.53,5.22a2.76,2.76,0,1,0,0,5.52A2.86,2.86,0,0,0,71.15,25V23A2.91,2.91,0,0,0,68.49,21.27ZM79,19.64c3.31,0,4.46,2.68,3.92,5.09H76.7c0.21,1.5,1.67,2.11,3.19,2.11a6.11,6.11,0,0,0,2.64-.59v1.6a7.14,7.14,0,0,1-3,.57C77,28.42,74.78,27,74.78,24a4.18,4.18,0,0,1,4-4.39H79Zm0.09,1.54a2.28,2.28,0,0,0-2.44,2.1v0.06H81.3A2,2,0,0,0,79.13,21.18Zm5.73,7V19.87h1.65v1a3.81,3.81,0,0,1,2.78-1.27A2.86,2.86,0,0,1,91.89,21a4.12,4.12,0,0,1,2.91-1.33A3.06,3.06,0,0,1,98,23V28.2h-1.9V23.05a1.59,1.59,0,0,0-1.42-1.75H94.42a2.8,2.8,0,0,0-2.07,1.12V28.2h-1.9V23.05A1.59,1.59,0,0,0,89,21.31H88.8a3,3,0,0,0-2.21,1.29v5.63H84.86Zm21.31-8.33h1.9l-3.91,9.46c-0.9,2.17-2.09,2.86-3.35,2.86a4.76,4.76,0,0,1-1.1-.14V30.46a2.86,2.86,0,0,0,.85.12c0.9,0,1.58-.64,2.07-1.9l0.17-.42-4-8.4h2l2.86,6.29ZM38.73,1.46V6.22a3.81,3.81,0,0,1,2.7-1.14,3.25,3.25,0,0,1,3.44,3.4v5.15H43V8.72a1.81,1.81,0,0,0-1.61-2h-0.3a2.93,2.93,0,0,0-2.32,1.39v5.52h-1.9V1.46h1.9ZM49.94,2.31v3h3V6.91h-3v3.81c0,1.1.5,1.46,1.58,1.46a4.49,4.49,0,0,0,1.69-.33v1.6A6.8,6.8,0,0,1,51,13.8a2.55,2.55,0,0,1-2.86-2.74V6.89H46.58V5.26h1.5V2.74Zm5.4,11.31V5.28H57v1A3.81,3.81,0,0,1,59.77,5a2.86,2.86,0,0,1,2.6,1.33A4.12,4.12,0,0,1,65.28,5,3.06,3.06,0,0,1,68.44,8.4v5.21h-1.9V8.46a1.59,1.59,0,0,0-1.42-1.75H64.89a2.8,2.8,0,0,0-2.07,1.12v5.78h-1.9V8.46A1.59,1.59,0,0,0,59.5,6.71H59.27A3,3,0,0,0,57.06,8v5.63H55.34ZM71.17,1.45H73V13.6H71.17V1.45ZM14.71,0H14.55L0,1.54V28.21l14.55,8.66,14.55-8.66V1.54Zm12.5,27.1L14.55,34.64,1.9,27.12V16.18l12.59,7.5V25L5.86,19.9v1.31l8.68,5.21v1.39L5.87,22.65V24l8.68,5.21,8.75-5.24V18.31L27.2,16V27.12Zm0-12.53-3.48,2-1.6,1L14.51,13v1.31L21,18.23H21l-0.14.09-1,.54-5.37-3.2V17l4.24,2.52-1,.67-3.2-1.9v1.31l2.1,1.24L14.5,22.1,2,14.65,14.51,7.11Zm0-1.32L14.49,5.76,1.91,13.25v-10L14.56,1.92,27.21,3.25v10h0Z"
+              transform="translate(0 -0.02)" fill="#fff"/>
           </svg>
         </a><br>
         <b>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019</b>
@@ -411,9 +421,9 @@
     </button>
   </form>
 </div>
-
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 <script src="js/script.js"></script>
-<script src=https://api-maps.yandex.ru/2.1/?lang=ru_RU></script>
+
 </body>
 
 </html>
