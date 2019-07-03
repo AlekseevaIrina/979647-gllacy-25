@@ -47,9 +47,9 @@ link.addEventListener("click", function (evt) {
 
 
 form.addEventListener("submit", function (evt) {
-  evt.preventDefault();
 
   if (!feedbackName.value || !feedbackEmail.value || !feedbackMessage.value) {
+    evt.preventDefault();
     popup.classList.remove("modal-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("modal-error");
