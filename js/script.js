@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function init() {
     var map = new ymaps.Map("yandex-map", {
-      center: [59.939028, 30.329499],
+      center: [59.939236, 30.329499],
       zoom: 16,
       controls: []
     });
